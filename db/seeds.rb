@@ -6,7 +6,6 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-question_category = ["fiqh","aqeeda"]
 
 
 if User.count==0
@@ -16,19 +15,12 @@ if User.count==0
     # User.create(username:"tim4",email:"s93six@gmail.com",password: "pword4",password_confirmation:"pword4")
 end
 
-
-if Category.all.length == 0
-    question_category.each do |category|
-        Category.create(name: category)
-        puts "created #{category} category"
+if Store.count==0
+    Store.create(name:"Ministry Barbers",address:"219 Miller Rd, Bass Hill NSW 2197",user_id:1)
+    # User.create(username:"tim2",email:"s91six@gmail.com",password: "pword2",password_confirmation:"pword2")
+    # User.create(username:"tim3",email:"s92six@gmail.com",password: "pword3",password_confirmation:"pword3")
+    # User.create(username:"tim4",email:"s93six@gmail.com",password: "pword4",password_confirmation:"pword4")
 end
 
 
 
-if Question.all.length == 0
-    Question.create(user_id:1,category_id:1,title:"No Title 1",body:"No Body 1")
-    # Question.create(user_id:2,category_id:1,title:"No Title 2",body:"No Body 2")
-
-end
-
-end    

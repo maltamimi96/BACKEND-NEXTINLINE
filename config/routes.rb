@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     
 # end
 resources :questions
+resources :stores
 
 scope '/auth' do
   post'/sign_up',to: 'users#create'
